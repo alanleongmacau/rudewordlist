@@ -6,6 +6,8 @@ export interface TabooItem {
   language: string;
   country: string;
   regions: string[];
+  lat: number;
+  lng: number;
   type: string;
   severity_level: SeverityLevel;
   literal_meaning: string;
