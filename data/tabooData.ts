@@ -1,184 +1,106 @@
 import { TabooItem } from "@/types/taboo";
 
 export const tabooData: TabooItem[] = [
-  // ─── 中國 ────────────────────────────────────────────────────────────────────
+
+  // ─── 1. 日本：關東 / 關西 バカ 差異 ─────────────────────────────────────────
   {
-    id: "1",
-    word: "那個 (Nèi ge / Nà ge)",
-    language: "Chinese (Mandarin)",
-    country: "China",
-    regions: ["All"],
-    lat: 35.86,
-    lng: 104.19,
-    type: "Pronunciation Trap",
-    severity_level: "Red",
-    literal_meaning: "That / That one",
-    misunderstood_as: "N-word（種族歧視詞彙）",
+    id: "baka-jp",
+    word: "バカ (Baka)",
+    language: "Japanese",
+    country: "Japan",
+    regions: ["Kanto", "Kansai"],
+    lat: 36.2,
+    lng: 138.25,
+    type: "Dialect Trap",
+    severity_level: "Yellow",
+    literal_meaning: "笨蛋、傻瓜（Stupid / Idiot）",
+    misunderstood_as: "在關東（東京）等同正面侮辱，越大聲越嚴重，可能引發嚴重衝突",
     cultural_context:
-      "中文裡極度常用的口頭禪或代名詞。但在非華語圈，其發音極容易被誤認為是對黑人具強烈侮辱性的 N-word。",
+      "「バカ」在關西（大阪・京都）朋友間是親密調侃的吐槽用語，是搞笑文化（ツッコミ）的核心詞彙。但在關東（東京）同樣的詞卻帶有直接批評的意涵，對陌生人或長輩使用風險極高。地域差異之大，足以讓同一個詞從破冰神器變成社死炸彈。",
+    bonding_rate: 58,
+    offense_risk: 72,
+    tags: ["🗺️ 方言陷阱", "酒吧必備", "長輩雷區"],
+    banter_context:
+      "在關西（大阪・京都）的朋友圈，「バカ！」是親密的吐槽，宛如台灣人互稱「白癡」一樣日常。當地搞笑文化（ツッコミ）的核心用詞，笑著說完全沒問題——不說反而顯得冷漠。居酒屋裡越吵越親近。",
+    insult_context:
+      "在關東（東京）對陌生人或長輩直接說「バカ」等同正面開罵，語氣越重、分貝越高越嚴重。帶著關西親密習慣進東京居酒屋，是最常見的跨地雷區。對上司或長輩，這個詞在東京絕無任何友善空間。",
+    is_trending: true,
   },
+
+  // ─── 2. 英國足球酒吧：反手 V 字手勢 ───────────────────────────────────────
   {
-    id: "9",
-    word: "契弟 (Kai Dai)",
+    id: "reverse-v-uk",
+    word: "✌️ 反手 V 字 (Reverse V-sign)",
+    language: "Non-verbal / Gesture",
+    country: "United Kingdom",
+    regions: ["England", "Scotland", "Wales"],
+    lat: 51.5,
+    lng: -1.5,
+    type: "Gesture Taboo",
+    severity_level: "Red",
+    literal_meaning: "（依方向不同）勝利 / 和平 或 極度侮辱",
+    misunderstood_as: "反手 V 字在英國等同豎中指，是最嚴重的侮辱手勢，可能引發肢體衝突",
+    cultural_context:
+      "英國足球酒吧文化的高危手勢。手心方向決定一切：手心朝外（手背對自己）是 Churchill 式 V for Victory；手背朝外（手心對自己）則是英式 F*** You，程度等同豎中指。大量亞洲遊客拍照時不自覺做出反手版，在英格蘭球賽現場是極度危險的行為。",
+    bonding_rate: 4,
+    offense_risk: 96,
+    tags: ["🤚 肢體語言", "酒吧必備", "⛔ 絕對高危"],
+    banter_context:
+      "手心朝外的正面 V 字（手背朝自己）是全球通用的勝利／和平手勢，Churchill 的 V for Victory 就是此版本。英國人拍照時比正面 V 完全無害，是標準觀光客動作，對方球迷看到也不會有反應。",
+    insult_context:
+      "手背朝外的「反手 V 字」（手心朝自己）在英國及愛爾蘭等同豎中指，是最嚴重侮辱手勢之一。英格蘭足球酒吧裡對著對方球迷比出此手勢，可能直接引發群架。許多亞洲遊客拍照時習慣性反手比 V，在英國需極度警覺——尤其在任何球賽場合。",
+    is_trending: true,
+  },
+
+  // ─── 3. 粵語區（香港 / 澳門）：仆街 / 頂你情境差異 ─────────────────────────
+  {
+    id: "puk-gaai-hk",
+    word: "仆街 / 頂你",
     language: "Cantonese",
     country: "China",
     regions: ["Hong Kong", "Macau"],
-    lat: 22.32,
+    lat: 22.3,
     lng: 114.17,
     type: "Vulgar Slang",
     severity_level: "Red",
-    literal_meaning: "（粵語方言詞，無直接對應字面意思）",
-    misunderstood_as: "看似普通粵語詞，實為極度粗俗的侮辱性罵語",
+    literal_meaning: "仆街：字面為「倒斃在街頭」；頂你：「頂撞你」（Cantonese expletives）",
+    misunderstood_as:
+      "外來者誤以為是普通口頭禪，實為粵語最嚴重粗口之一，在陌生場合使用極易引發衝突",
     cultural_context:
-      "「契弟」在香港及澳門粵語口語中是嚴重侮辱性詞彙，字面看似無害，但在粵語文化圈中屬禁忌用語。外來者若在聽到此詞後學著使用，極可能在商務或社交場合造成嚴重冒犯。此詞在港澳兩地均屬禁用詞，絕不可輕率使用。",
+      "「仆街」與「頂你」是港澳粵語日常發洩詞，情境差異極大。熟識度與場合是唯一判斷邊界的依據。外來者若因聽到本地人使用便跟著模仿，幾乎必然踩雷——只有在地人才知道那條隱形紅線在哪裡。",
+    bonding_rate: 28,
+    offense_risk: 87,
+    tags: ["🚫 粗口警告", "酒吧必備", "📍 地區限定"],
+    banter_context:
+      "在香港及澳門的至交好友圈，「仆街！」可作驚訝感嘆詞，類似英語「Oh sh*t!」，不帶惡意；「頂你咋」則是輕鬆的抱怨表達。本地年輕人日常對話偶爾使用，需要極深的熟識度——這條線只有本地人能準確判斷。",
+    insult_context:
+      "「仆街」字面意指「倒斃在街頭」，是咒人橫死的最惡毒粵語粗口之一。「頂你」（頂撞你）對長輩、上司或陌生人使用，等同嚴重失禮甚至人身攻擊。外來者在不熟識的場合使用，極易被視為刻意挑釁，引發口頭甚至肢體衝突。",
+    is_trending: false,
   },
 
-  // ─── 英國 ────────────────────────────────────────────────────────────────────
+  // ─── 4. 北美：那個 / 內個 N-word 發音陷阱 ────────────────────────────────
   {
-    id: "2",
-    word: "Fart (放屁)",
-    language: "English",
-    country: "United Kingdom",
+    id: "neige-nword",
+    word: "那個 / 內個 (Nèi ge)",
+    language: "Chinese (Mandarin)",
+    country: "United States",
     regions: ["All"],
-    lat: 51.5,
-    lng: -0.12,
-    type: "Gesture / Context Trap",
-    severity_level: "Yellow",
-    literal_meaning: "Passing gas（排氣）",
-    misunderstood_as: "在某些正式場合用此詞開玩笑會被視為嚴重失禮",
-    cultural_context:
-      "在英式英語的正式商業或社交場合中，提及身體功能相關詞彙被認為極度粗俗，即使在輕鬆場合也應謹慎使用。",
-  },
-
-  // ─── 希臘 ────────────────────────────────────────────────────────────────────
-  {
-    id: "3",
-    word: "👍 (大拇指朝上)",
-    language: "Non-verbal / Gesture",
-    country: "Greece",
-    regions: ["All"],
-    lat: 39.07,
-    lng: 21.82,
-    type: "Gesture Taboo",
+    lat: 37.09,
+    lng: -95.71,
+    type: "Pronunciation Trap",
     severity_level: "Red",
-    literal_meaning: "Good / Approval（讚、同意）",
-    misunderstood_as: "嚴重侮辱（相當於豎中指）",
+    literal_meaning: "那個 / 那一個（That / That one）——中文最日常的代名詞與填充詞",
+    misunderstood_as:
+      "在北美英語多族裔環境中，發音與英語最嚴重種族歧視詞彙（N-word）高度相似，可能引發嚴重社會與法律後果",
     cultural_context:
-      "在西方文化中象徵正面肯定的大拇指手勢，在希臘、伊朗等中東及地中海國家被視為嚴重的侮辱手勢，含義接近豎中指。旅行時應特別注意。",
-  },
-
-  // ─── 巴西 ────────────────────────────────────────────────────────────────────
-  {
-    id: "4",
-    word: "OK 手勢 (👌)",
-    language: "Non-verbal / Gesture",
-    country: "Brazil",
-    regions: ["All"],
-    lat: -14.24,
-    lng: -51.93,
-    type: "Gesture Taboo",
-    severity_level: "Yellow",
-    literal_meaning: "OK / Everything is fine（沒問題）",
-    misunderstood_as: "粗俗侮辱或暗指對方為「零」（廢物）",
-    cultural_context:
-      "在巴西、土耳其及部分地中海國家，OK 圈圈手勢具有粗俗或侮辱性含義。在某些歐洲國家則暗示「你是個零」（廢物）。在北美、東亞等地則完全無害。",
-  },
-
-  // ─── 印度 ────────────────────────────────────────────────────────────────────
-  {
-    id: "5",
-    word: "Namaste (नमस्ते)",
-    language: "Hindi / Sanskrit",
-    country: "India",
-    regions: ["All"],
-    lat: 20.59,
-    lng: 78.96,
-    type: "Semantic Difference",
-    severity_level: "Green",
-    literal_meaning: "我向你內心的神性致敬（I bow to the divine in you）",
-    misunderstood_as: "被西方文化單純理解為「你好」，失去宗教與哲學深度",
-    cultural_context:
-      "Namaste 在印度文化中蘊含深刻的宗教與哲學意涵，代表對對方靈性的尊重。在全球瑜伽文化流行後，此詞常被簡化為普通問候語，對印度人而言可能略感文化淡化，但不至於冒犯。",
-  },
-
-  // ─── 法國 ────────────────────────────────────────────────────────────────────
-  {
-    id: "6",
-    word: "Merde (メルド)",
-    language: "French",
-    country: "France",
-    regions: ["All"],
-    lat: 46.23,
-    lng: 2.21,
-    type: "Context Inversion",
-    severity_level: "Green",
-    literal_meaning: "Shit（髒話）",
-    misunderstood_as: "在劇場文化中是祝福語，外來者用「Good Luck」反而不吉利",
-    cultural_context:
-      "在法語劇場傳統中，演出前說「Merde！」是帶來好運的習俗，相當於英語劇場說「Break a leg」。若外來者在後台對演員說「Good Luck」，反而會被視為咒語帶來厄運。",
-  },
-
-  // ─── 日本 ────────────────────────────────────────────────────────────────────
-  {
-    id: "7",
-    word: "おおきに (Ōkini)",
-    language: "Japanese (Kansai Dialect)",
-    country: "Japan",
-    regions: ["Kansai"],
-    lat: 34.69,
-    lng: 135.5,
-    type: "Dialect Trap",
-    severity_level: "Yellow",
-    literal_meaning: "非常感謝 (Thank you very much)",
-    misunderstood_as: "在關東（東京）使用會顯得戲謔、造作，甚至帶有輕蔑意味",
-    cultural_context:
-      "「おおきに」是大阪、京都等關西地區常用的道謝語，在當地是自然親切的表達。但若在東京等關東地區對陌生人使用，對方可能感到困惑甚至覺得你在模仿或嘲弄方言，建議在關東一律使用標準語「ありがとう」。",
-  },
-  {
-    id: "10",
-    word: "やばい (Yabai)",
-    language: "Japanese",
-    country: "Japan",
-    regions: ["Kanto"],
-    lat: 35.68,
-    lng: 139.69,
-    type: "Semantic Inversion",
-    severity_level: "Green",
-    literal_meaning: "危險、麻煩（傳統含義）",
-    misunderstood_as: "年長者聽到「やばい」表示讚美時，以為對方在說情況很糟糕",
-    cultural_context:
-      "「やばい」傳統上在關東（東京）意指「危險的、麻煩的、糟糕的」，帶有負面警示意涵。然而在現代日本青年文化中，此詞已演變為「超讚！」「令人震撼！」等極度正面的讚嘆詞。這種語意反轉在跨世代溝通中易造成嚴重誤解，在正式商業場合尤其需要謹慎。",
-  },
-
-  // ─── 義大利 ──────────────────────────────────────────────────────────────────
-  {
-    id: "8",
-    word: "下頷刷手 (Chin Flick)",
-    language: "Non-verbal / Gesture",
-    country: "Italy",
-    regions: ["Southern Italy", "Sicily"],
-    lat: 37.6,
-    lng: 14.0,
-    type: "Gesture Taboo",
-    severity_level: "Red",
-    literal_meaning: "不知道 / 沒有 (I don't know / Nothing here)",
-    misunderstood_as: "嚴重輕視、「滾開」或「我不在乎你」",
-    cultural_context:
-      "在義大利南部及西西里，以手背輕刷下頷向外彈出，表示「我不知道」或「這裡什麼都沒有」。但在北義，此手勢較不常見，易被解讀為強烈的鄙視或拒絕，甚至可能引發衝突。北部旅客前往南部時需特別留意此手勢的語境差異。",
-  },
-  {
-    id: "11",
-    word: "手指併攏上下擺動 (Mano a Borsa)",
-    language: "Non-verbal / Gesture",
-    country: "Italy",
-    regions: ["Southern Italy", "Rome"],
-    lat: 41.9,
-    lng: 12.5,
-    type: "Gesture Taboo",
-    severity_level: "Yellow",
-    literal_meaning: "「你到底想說什麼？」（What do you want? / What are you saying?）",
-    misunderstood_as: "北義及外國旅客以為對方在乞討或表達飢餓",
-    cultural_context:
-      "將五指併攏朝上，手腕上下輕彈的「錢袋手勢（Mano a Borsa）」在羅馬及南義是強調問句的常用肢體語言，充滿表達力。但在北義米蘭等地較少使用，外來者不了解語境時，常誤以為對方在要錢或表達不耐，易造成溝通誤解。",
+      "「那個／內個」是中文裡頻率最高的代名詞與語助詞，相當於英文的「that thing」或口語停頓「uh...」。在中文母語者日常對話中完全無害，成年人每天可能使用數十次。然而在北美多族裔公共場所、學校、職場環境中，其發音「Nèi ge」與英語最嚴重種族歧視詞彙相似程度驚人，即便毫無惡意也可能引發嚴重後果。",
+    bonding_rate: 2,
+    offense_risk: 98,
+    tags: ["🔊 發音地雷", "長輩雷區", "⛔ 絕對高危"],
+    banter_context:
+      "「那個／內個」在中文裡是最日常的代名詞與填充語助詞，相當於英文的「that thing」或「uh...」。在任何中文母語者的環境中完全無害，是再自然不過的語言習慣，甚至出現在央視播音員的正式播報中。",
+    insult_context:
+      "在北美英語環境，「Nèi ge」的發音與英語最嚴重種族歧視詞彙（N-word）高度相似。即便毫無惡意，在多族裔公共場所、學校、職場中使用，可能立刻引發嚴重社會及法律後果。在北美建議一律改用「這個（zhège）」或「嗯……」作為填充詞——這是有過真實案例的教訓。",
+    is_trending: true,
   },
 ];
